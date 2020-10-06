@@ -32,7 +32,6 @@ var run = function(apiKey, dir, sourceLanguage, languages, includeHtml, finish) 
       ggl.translate(text, sourceLanguage, language, function(err, translation) {
 
         if (err) {
-          console.log(err);
           return callback(TRANSERR.NOT_TRANSLATED, text);
         }
 
@@ -112,7 +111,8 @@ var run = function(apiKey, dir, sourceLanguage, languages, includeHtml, finish) 
                 "text": text,
                 "source": sourceLanguage,
                 "target": language
-              };
+              };          
+              console.log(text,language);
             }
 
             return translated(null, e);
