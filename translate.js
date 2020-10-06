@@ -112,6 +112,7 @@ var run = function(apiKey, dir, sourceLanguage, languages, includeHtml, finish) 
                 "source": sourceLanguage,
                 "target": language
               };
+              console.log(e);
             }
 
             return translated(null, e);
